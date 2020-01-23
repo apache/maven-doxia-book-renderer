@@ -65,7 +65,7 @@ public class DocBookBookSinkTest extends AbstractSinkTest
     /**
      * Disable a flaky auto-generated test.
      */
-  /*  @Override
+    @Override
     public void testFigure()
     {
         String source = "figure.jpg";
@@ -78,7 +78,7 @@ public class DocBookBookSinkTest extends AbstractSinkTest
         getSink().figure_();
         getSink().flush();
         getSink().close();
-    } */
+    }
 
     /**
      * Checks that the sequence <code>[bookTitle(), text( title ), bookTitle_()]</code>,
