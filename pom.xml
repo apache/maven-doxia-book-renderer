@@ -25,8 +25,7 @@ under the License.
   <parent>
     <groupId>org.apache.maven.doxia</groupId>
     <artifactId>doxia-tools</artifactId>
-    <version>30</version>
-    <relativePath>../../../pom/maven/doxia-tools/pom.xml</relativePath>
+    <version>33</version>
   </parent>
 
   <artifactId>doxia-book-renderer</artifactId>
@@ -54,6 +53,7 @@ under the License.
   <properties>
     <doxiaVersion>1.3</doxiaVersion>
     <checkstyle.violation.ignore>MethodName,NewlineAtEndOfFile,ParameterNumber</checkstyle.violation.ignore>
+    <javaVersion>7</javaVersion>
   </properties>
 
   <dependencies>
