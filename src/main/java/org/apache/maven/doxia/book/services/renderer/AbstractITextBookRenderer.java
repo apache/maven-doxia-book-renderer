@@ -41,7 +41,6 @@ import org.codehaus.plexus.component.annotations.Requirement;
 import org.codehaus.plexus.logging.AbstractLogEnabled;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.ReaderFactory;
-import org.codehaus.plexus.util.StringUtils;
 import org.codehaus.plexus.util.WriterFactory;
 import org.codehaus.plexus.util.xml.PrettyPrintXMLWriter;
 
@@ -324,7 +323,7 @@ public abstract class AbstractITextBookRenderer
         writer.addAttribute( "red", red );
         writer.addAttribute( "green", green );
         writer.addAttribute( "blue", blue );
-        if ( StringUtils.isNotEmpty( title ) )
+        if ( title != null && !title.isEmpty() )
         {
             writer.writeText( title );
         }

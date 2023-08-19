@@ -47,7 +47,6 @@ import org.codehaus.plexus.i18n.I18N;
 import org.codehaus.plexus.logging.AbstractLogEnabled;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.ReaderFactory;
-import org.codehaus.plexus.util.StringUtils;
 import org.codehaus.plexus.util.WriterFactory;
 
 /**
@@ -103,7 +102,7 @@ public class XdocBookRenderer
      */
     protected String getString( Locale locale, String key )
     {
-        if ( StringUtils.isEmpty( key ) )
+        if ( key == null || key.isEmpty() )
         {
             throw new IllegalArgumentException( "The key cannot be empty" );
         }
