@@ -131,7 +131,7 @@ public class DefaultBookIo
         {
             getLogger().debug( "Dumping document <-> id mapping:" );
 
-            Map<String, BookContext.BookFile> map = new TreeMap<String, BookContext.BookFile>( context.getFiles() );
+            Map<String, BookContext.BookFile> map = new TreeMap<>( context.getFiles() );
 
             for ( Map.Entry<String, BookContext.BookFile> entry : map.entrySet() )
             {

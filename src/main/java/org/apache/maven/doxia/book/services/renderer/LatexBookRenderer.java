@@ -129,7 +129,7 @@ public class LatexBookRenderer
         // Process all the section documents and collect their names
         // ----------------------------------------------------------------------
 
-        Map<String, SectionInfo> sectionInfos = new HashMap<String, SectionInfo>();
+        Map<String, SectionInfo> sectionInfos = new HashMap<>();
 
         for ( Chapter chapter : book.getChapters() )
         {
