@@ -25,7 +25,6 @@ import java.util.Locale;
 import org.apache.maven.doxia.module.xdoc.XdocSink;
 
 import org.codehaus.plexus.i18n.I18N;
-import org.codehaus.plexus.util.StringUtils;
 
 /**
  * Abstract <code>XdocSink</code> implementation for book.
@@ -111,7 +110,7 @@ public abstract class AbstractXdocBookSink
      */
     protected String getString( String key )
     {
-        if ( StringUtils.isEmpty( key ) )
+        if ( key == null || key.isEmpty() )
         {
             throw new IllegalArgumentException( "The key cannot be empty" );
         }
