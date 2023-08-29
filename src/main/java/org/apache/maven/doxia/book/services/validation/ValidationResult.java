@@ -55,7 +55,7 @@ public class ValidationResult
     {
         if ( errors == null )
         {
-            errors = new ArrayList<String>();
+            errors = new ArrayList<>();
         }
 
         return errors;
@@ -70,7 +70,7 @@ public class ValidationResult
     {
         if ( warnings == null )
         {
-            warnings = new ArrayList<String>();
+            warnings = new ArrayList<>();
         }
 
         return warnings;

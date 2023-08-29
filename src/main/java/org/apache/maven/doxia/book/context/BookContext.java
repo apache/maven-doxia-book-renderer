@@ -134,7 +134,7 @@ public class BookContext
     {
         if ( files == null )
         {
-            files = new HashMap<String, BookContext.BookFile>();
+            files = new HashMap<>();
         }
 
         return files;
