@@ -35,7 +35,8 @@ import org.apache.maven.doxia.parser.ParseException;
 import org.apache.maven.doxia.parser.manager.ParserNotFoundException;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
-import org.codehaus.plexus.logging.AbstractLogEnabled;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Default implementation of BookIndexer.
@@ -45,9 +46,9 @@ import org.codehaus.plexus.logging.AbstractLogEnabled;
  */
 @Component( role = BookIndexer.class )
 public class DefaultBookIndexer
-    extends AbstractLogEnabled
     implements BookIndexer
 {
+    private static final Logger logger = LoggerFactory.getLogger( DefaultBookIndexer.class );
     @Requirement
     private Doxia doxia;
 

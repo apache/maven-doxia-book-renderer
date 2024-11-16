@@ -44,10 +44,11 @@ import org.apache.maven.doxia.util.HtmlTools;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
 import org.codehaus.plexus.i18n.I18N;
-import org.codehaus.plexus.logging.AbstractLogEnabled;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.ReaderFactory;
 import org.codehaus.plexus.util.WriterFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * An implementation of <code>BookRenderer</code> for Xdoc
@@ -58,9 +59,9 @@ import org.codehaus.plexus.util.WriterFactory;
  */
 @Component( role = BookRenderer.class, hint = "xdoc" )
 public class XdocBookRenderer
-    extends AbstractLogEnabled
     implements BookRenderer
 {
+    private static final Logger logger = LoggerFactory.getLogger( XdocBookRenderer.class );
     @Requirement
     private Doxia doxia;
 

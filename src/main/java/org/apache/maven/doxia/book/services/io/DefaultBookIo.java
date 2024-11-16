@@ -28,9 +28,10 @@ import org.apache.maven.doxia.module.site.manager.SiteModuleManager;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.ReaderFactory;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
-import org.codehaus.plexus.logging.AbstractLogEnabled;
 
 import java.io.IOException;
 import java.io.File;
@@ -48,9 +49,9 @@ import java.util.List;
  */
 @Component( role = BookIo.class )
 public class DefaultBookIo
-    extends AbstractLogEnabled
     implements BookIo
 {
+    private static final Logger logger = LoggerFactory.getLogger( DefaultBookIo.class );
     @Requirement
     private SiteModuleManager siteModuleManager;
 
@@ -127,9 +128,9 @@ public class DefaultBookIo
             }
         }
 
-        if ( getLogger().isDebugEnabled() )
+        if ( logger.isDebugEnabled() )
         {
-            getLogger().debug( "Dumping document <-> id mapping:" );
+            logger.debug( "Dumping document <-> id mapping:" );
 
             Map<String, BookContext.BookFile> map = new TreeMap<>( context.getFiles() );
 
@@ -137,7 +138,7 @@ public class DefaultBookIo
             {
                 BookContext.BookFile file = entry.getValue();
 
-                getLogger().debug( " " + entry.getKey() + "=" + file.getFile() + ", parser: " + file.getParserId() );
+                logger.debug( " " + entry.getKey() + "=" + file.getFile() + ", parser: " + file.getParserId() );
             }
         }
     }

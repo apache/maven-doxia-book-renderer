@@ -38,11 +38,12 @@ import org.apache.maven.doxia.parser.ParseException;
 import org.apache.maven.doxia.parser.manager.ParserNotFoundException;
 import org.apache.maven.doxia.sink.Sink;
 import org.codehaus.plexus.component.annotations.Requirement;
-import org.codehaus.plexus.logging.AbstractLogEnabled;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.ReaderFactory;
 import org.codehaus.plexus.util.WriterFactory;
 import org.codehaus.plexus.util.xml.PrettyPrintXMLWriter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Base class for <code>iText</code> renderer.
@@ -52,9 +53,9 @@ import org.codehaus.plexus.util.xml.PrettyPrintXMLWriter;
  * @version $Id$
  */
 public abstract class AbstractITextBookRenderer
-    extends AbstractLogEnabled
     implements BookRenderer
 {
+    private static final Logger logger = LoggerFactory.getLogger( AbstractITextBookRenderer.class );
     @Requirement
     private Doxia doxia;
 

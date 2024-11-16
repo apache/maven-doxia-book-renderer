@@ -26,6 +26,8 @@ import java.io.IOException;
 
 import org.apache.maven.doxia.module.itext.ITextUtil;
 import org.codehaus.plexus.component.annotations.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * RTF book renderer with the <code>iText</code> framework.
@@ -37,6 +39,8 @@ import org.codehaus.plexus.component.annotations.Component;
 public class RtfBookRenderer
     extends AbstractITextBookRenderer
 {
+    private static final Logger logger = LoggerFactory.getLogger( RtfBookRenderer.class );
+
     /** {@inheritDoc} */
     public String getOutputExtension()
     {
