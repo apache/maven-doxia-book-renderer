@@ -54,7 +54,8 @@ import org.slf4j.LoggerFactory;
 public class DocbookBookRenderer
     implements BookRenderer
 {
-    private static final Logger logger = LoggerFactory.getLogger( DocbookBookRenderer.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( DocbookBookRenderer.class );
+
     @Requirement
     private Doxia doxia;
 

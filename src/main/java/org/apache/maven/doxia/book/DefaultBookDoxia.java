@@ -48,7 +48,8 @@ import java.util.Set;
 public class DefaultBookDoxia
     implements BookDoxia
 {
-    private static final Logger logger = LoggerFactory.getLogger( DefaultBookDoxia.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( DefaultBookDoxia.class );
+
     @Requirement
     private BookIo bookIo;
 

@@ -55,7 +55,7 @@ import org.slf4j.LoggerFactory;
 public abstract class AbstractITextBookRenderer
     implements BookRenderer
 {
-    private static final Logger logger = LoggerFactory.getLogger( AbstractITextBookRenderer.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( AbstractITextBookRenderer.class );
     @Requirement
     private Doxia doxia;
 

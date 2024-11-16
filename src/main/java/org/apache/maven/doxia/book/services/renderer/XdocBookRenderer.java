@@ -61,7 +61,8 @@ import org.slf4j.LoggerFactory;
 public class XdocBookRenderer
     implements BookRenderer
 {
-    private static final Logger logger = LoggerFactory.getLogger( XdocBookRenderer.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( XdocBookRenderer.class );
+
     @Requirement
     private Doxia doxia;
 

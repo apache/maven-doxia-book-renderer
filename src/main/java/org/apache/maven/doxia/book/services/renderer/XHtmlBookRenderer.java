@@ -53,7 +53,8 @@ import java.io.Writer;
 public class XHtmlBookRenderer
     implements BookRenderer
 {
-    private static final Logger logger = LoggerFactory.getLogger( XHtmlBookRenderer.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( XHtmlBookRenderer.class );
+
     @Requirement
     private Doxia doxia;
 

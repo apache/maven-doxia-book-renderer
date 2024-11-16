@@ -48,7 +48,8 @@ import org.slf4j.LoggerFactory;
 public class DefaultBookIndexer
     implements BookIndexer
 {
-    private static final Logger logger = LoggerFactory.getLogger( DefaultBookIndexer.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( DefaultBookIndexer.class );
+
     @Requirement
     private Doxia doxia;
 

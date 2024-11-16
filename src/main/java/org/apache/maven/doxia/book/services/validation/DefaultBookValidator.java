@@ -37,7 +37,7 @@ import org.apache.maven.doxia.book.model.Chapter;
 public class DefaultBookValidator
     implements BookValidator
 {
-    private static final Logger logger = LoggerFactory.getLogger( DefaultBookValidator.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( DefaultBookValidator.class );
 
     // ----------------------------------------------------------------------
     // BookValidator Implementation

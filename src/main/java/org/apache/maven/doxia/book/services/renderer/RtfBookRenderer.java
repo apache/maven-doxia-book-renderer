@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
 public class RtfBookRenderer
     extends AbstractITextBookRenderer
 {
-    private static final Logger logger = LoggerFactory.getLogger( RtfBookRenderer.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( RtfBookRenderer.class );
 
     /** {@inheritDoc} */
     public String getOutputExtension()

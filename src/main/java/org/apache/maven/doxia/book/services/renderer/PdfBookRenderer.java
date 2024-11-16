@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
 public class PdfBookRenderer
     extends AbstractITextBookRenderer
 {
-    private static final Logger logger = LoggerFactory.getLogger( PdfBookRenderer.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( PdfBookRenderer.class );
 
     /** {@inheritDoc} */
     public String getOutputExtension()

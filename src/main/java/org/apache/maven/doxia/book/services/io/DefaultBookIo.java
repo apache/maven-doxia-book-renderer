@@ -51,7 +51,8 @@ import java.util.List;
 public class DefaultBookIo
     implements BookIo
 {
-    private static final Logger logger = LoggerFactory.getLogger( DefaultBookIo.class );
+    private static final Logger LOGGER = LoggerFactory.getLogger( DefaultBookIo.class );
+
     @Requirement
     private SiteModuleManager siteModuleManager;
 
@@ -128,9 +129,9 @@ public class DefaultBookIo
             }
         }
 
-        if ( logger.isDebugEnabled() )
+        if ( LOGGER.isDebugEnabled() )
         {
-            logger.debug( "Dumping document <-> id mapping:" );
+            LOGGER.debug( "Dumping document <-> id mapping:" );
 
             Map<String, BookContext.BookFile> map = new TreeMap<>( context.getFiles() );
 
@@ -138,7 +139,7 @@ public class DefaultBookIo
             {
                 BookContext.BookFile file = entry.getValue();
 
-                logger.debug( " " + entry.getKey() + "=" + file.getFile() + ", parser: " + file.getParserId() );
+                LOGGER.debug( " " + entry.getKey() + "=" + file.getFile() + ", parser: " + file.getParserId() );
             }
         }
     }
