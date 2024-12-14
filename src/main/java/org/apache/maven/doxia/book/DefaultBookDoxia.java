@@ -28,7 +28,8 @@ import org.apache.maven.doxia.book.services.validation.BookValidator;
 import org.apache.maven.doxia.book.services.validation.ValidationResult;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
-import org.codehaus.plexus.logging.AbstractLogEnabled;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.util.Collections;
@@ -45,9 +46,10 @@ import java.util.Set;
  */
 @Component( role = BookDoxia.class )
 public class DefaultBookDoxia
-    extends AbstractLogEnabled
     implements BookDoxia
 {
+    private static final Logger LOGGER = LoggerFactory.getLogger( DefaultBookDoxia.class );
+
     @Requirement
     private BookIo bookIo;
 

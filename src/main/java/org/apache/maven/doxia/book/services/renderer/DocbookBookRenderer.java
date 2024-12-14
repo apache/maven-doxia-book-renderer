@@ -37,11 +37,12 @@ import org.apache.maven.doxia.parser.manager.ParserNotFoundException;
 import org.apache.maven.doxia.sink.Sink;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
-import org.codehaus.plexus.logging.AbstractLogEnabled;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.ReaderFactory;
 import org.codehaus.plexus.util.StringUtils;
 import org.codehaus.plexus.util.WriterFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * An implementation of <code>BookRenderer</code> for docbook
@@ -51,9 +52,10 @@ import org.codehaus.plexus.util.WriterFactory;
  */
 @Component( role = BookRenderer.class, hint = "doc-book" )
 public class DocbookBookRenderer
-    extends AbstractLogEnabled
     implements BookRenderer
 {
+    private static final Logger LOGGER = LoggerFactory.getLogger( DocbookBookRenderer.class );
+
     @Requirement
     private Doxia doxia;
 

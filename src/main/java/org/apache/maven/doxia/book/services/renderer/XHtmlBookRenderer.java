@@ -31,9 +31,10 @@ import org.apache.maven.doxia.parser.manager.ParserNotFoundException;
 import org.apache.maven.doxia.parser.ParseException;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
-import org.codehaus.plexus.logging.AbstractLogEnabled;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.ReaderFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -50,9 +51,10 @@ import java.io.Writer;
  */
 @Component( role = BookRenderer.class, hint = "xhtml" )
 public class XHtmlBookRenderer
-    extends AbstractLogEnabled
     implements BookRenderer
 {
+    private static final Logger LOGGER = LoggerFactory.getLogger( XHtmlBookRenderer.class );
+
     @Requirement
     private Doxia doxia;
 
