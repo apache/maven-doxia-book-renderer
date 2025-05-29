@@ -40,8 +40,8 @@ under the License.
     <url>http://svn.apache.org/viewvc/maven/doxia/doxia-tools/trunk/doxia-book-renderer</url>
   </scm>
   <issueManagement>
-    <system>jira</system>
-    <url>https://issues.apache.org/jira/browse/DOXIATOOLS/component/12326006</url>
+    <system>GitHub Issues</system>
+    <url>https://github.com/apache/maven-doxia-book-renderer/issues</url>
   </issueManagement>
   <distributionManagement>
     <site>
