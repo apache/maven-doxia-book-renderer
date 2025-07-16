@@ -51,7 +51,7 @@ under the License.
   </distributionManagement>
 
   <properties>
-    <doxiaVersion>1.3</doxiaVersion>
+    <doxiaVersion>1.12.0</doxiaVersion>
     <checkstyle.violation.ignore>MethodName,NewlineAtEndOfFile,ParameterNumber</checkstyle.violation.ignore>
     <javaVersion>8</javaVersion>
     <project.build.outputTimestamp>2020-04-07T21:04:00Z</project.build.outputTimestamp>
